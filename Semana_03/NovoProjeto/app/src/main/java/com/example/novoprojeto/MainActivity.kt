@@ -28,7 +28,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clique(view: View){
-        var aleatorio = Random()
-        Log.i("NOVOPROJETO", aleatorio.nextInt(60).toString())
+        val aleatorio = Random()
+        val c = mutableSetOf<String>()
+        var i = 0
+
+        while(i < 6)
+        {
+            c.add(aleatorio.nextInt(60).toString())
+            i = c.size
+        }
+
+        Log.i("NOVOPROJETO", "$c")
     }
 }
