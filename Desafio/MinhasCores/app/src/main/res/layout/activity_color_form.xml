@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ColorForm">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/form_title"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="@string/cor_nome_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/vermelho"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:max="255"
+                android:progress="3"
+                android:theme="@style/Theme.MinhasCoresRed"
+                android:thumb="@drawable/red_24"
+                app:tickMarkTint="@color/red"
+                app:tickMarkTintMode="src_over" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/verde"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:max="255"
+                android:progress="218"
+                android:theme="@style/Theme.MinhasCoresGreen"
+                android:thumb="@drawable/green_24"
+                app:tickMarkTint="@color/green" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/azul"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbBlue"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:max="255"
+                android:progress="255"
+                android:theme="@style/Theme.MinhasCoresBlue"
+                android:thumb="@drawable/blue_24"
+                app:tickMarkTint="@color/blue" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/current_color"
+            android:textColor="@color/grey_50"
+            app:backgroundTint="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button"
+        app:backgroundTint="?attr/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_button"
+        android:textColor="?android:attr/colorForeground"
+        app:backgroundTint="?attr/colorButtonNormal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSalvar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

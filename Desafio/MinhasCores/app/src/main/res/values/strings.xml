@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MinhasCores</string>
+    <string name="form_title">COR</string>
+    <string name="cor_nome_hint">Nome da Cor</string>
+    <string name="vermelho">VERMELHO</string>
+    <string name="verde">VERDE</string>
+    <string name="azul">AZUL</string>
+    <string name="save_button">SALVAR</string>
+    <string name="cancel_button">CANCELAR</string>
+    <string name="current_color">#03DAFF</string>
+    <string name="color_icon_desc">Ícone palheta de cores.</string>
+    <string name="add_icon_desc">Ícone de adicionar.</string>
+</resources>
